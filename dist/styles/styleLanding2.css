@@ -620,6 +620,7 @@ header .intro-text .intro-heading {
 }
 
 .custom-row {
+    margin-top: 25px;
     display: flex;
     padding-top: 20px;
     flex-wrap: wrap;
