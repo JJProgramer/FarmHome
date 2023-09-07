@@ -18,9 +18,9 @@
         // Validar si los campos están correctos para iniciar
         if($row['userName'] == $userName && $row['password'] == $password ){
             $_SESSION['userName'] = $userName;
-            header("Location: /FarmHome/dist/main/main.php");
+            header("Location: ../main/main.php");
         } else {
-            header("Location: /FarmHome/dist/login/login.php?error=invalid");
+            header("Location: ../login/login.php?error=invalid");
             exit();
         }
     }
