@@ -39,7 +39,7 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`id`, `usuario`, `password`, `totalPreguntas`) VALUES
-(1, 'admin', 'admin', 10);
+(1, 'admin', 'admin', 5);
 
 -- --------------------------------------------------------
 
