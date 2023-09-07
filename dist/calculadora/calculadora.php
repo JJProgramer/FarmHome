@@ -111,7 +111,6 @@ if (isset($_SESSION['userName'])) {
             <!-- Acerca de -->
             <h1>CONVERTIDOR DE UNIDADES</h1>
             <section id="about">
-                <h1>CONVERTIDOR DE UNIDADES</h1>
                 <div id="container2">
                     <select class="form-control" name="unidades" id="tipoUnidad"><!-- Selecciona el tipo de unidad que se va a emplear para la conversion -->
                         <option value="Longitud">Longitud</option>
