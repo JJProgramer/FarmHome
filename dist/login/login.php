@@ -56,7 +56,7 @@
                     <input type="submit" id="enviar" class="btn_enviar" value="Registar" name="btn_registrar">
                 </form>
                 <?php
-                include("conexion.php");
+                include("../model/conexion.php");
 
                 $name = "";
                 $userName = "";

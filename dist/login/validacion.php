@@ -1,5 +1,5 @@
 <?php
-    include('conexion.php');
+    include('../model/conexion.php');
     session_start();
 
     $userName = $_POST['userName'];
