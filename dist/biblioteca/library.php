@@ -184,4 +184,4 @@ include('../template/footer.php')
 }
 
 ?>
-<!-- puta -->
+<!-- Te amo bb que te rinda en esta mierda -->
