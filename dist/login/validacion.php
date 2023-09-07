@@ -11,7 +11,7 @@
         exit();
     } else {
         $sql = "SELECT * FROM registrouser WHERE userName = '$userName' AND password = '$password'";
-        $resultado = $conexion->query($sql);
+        $resultado = $conn->query($sql);
 
         $row = $resultado->fetch_assoc();
 
