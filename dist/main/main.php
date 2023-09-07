@@ -43,25 +43,25 @@ if (isset($_SESSION['userName'])) {
                                 </a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="../calculadora/calculadora.php" target="#">
+                                <a class="page-scroll" href="../calculadora/calculadora.php">
                                     <ion-icon name="calculator"></ion-icon>
                                     <span>Herramientas</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="../biblioteca/library.php" target="#">
+                                <a class="page-scroll" href="../biblioteca/library.php">
                                     <ion-icon name="document-text"></ion-icon>
                                     <span>Biblioteca</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="../game/quiz/index.php" target="#">
+                                <a class="page-scroll" href="../game/quiz/index.php">
                                     <ion-icon name="extension-puzzle"></ion-icon>
                                     <span>Aprende</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="#" target="#">
+                                <a class="page-scroll" href="#">
                                     <ion-icon name="game-controller"></ion-icon>
                                     <span>Simulador<br>de siembra</span>
                                 </a>

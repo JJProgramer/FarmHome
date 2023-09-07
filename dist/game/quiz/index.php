@@ -66,7 +66,7 @@ if (isset($_SESSION['userName'])) {
 <?php
 } else {
 
-    header('Location: ./dist/login/login.php');
+    header('Location: /FarmHome/dist/login/login.php');
 }
 
 ?>

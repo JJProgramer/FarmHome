@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,31 +6,41 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    background: -webkit-linear-gradient(rgba(1, 95, 100, 0.89), rgba(0, 160, 72, 0.849), 
-    rgb(0, 255, 200),rgba(0, 160, 72, 0.849),rgba(1, 95, 100, 0.89));
+body {
+    background:white;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    
+
 }
 
-main{
+.nombre-pagina {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+
+}
+.nombre-pagina #inicio{
+    color: #0eaa00;
+}
+
+main {
     width: 100%;
     margin: 0;
-    margin-top: 100px;
+    margin-top: 5rem;
 }
 
-.contenedor__todo{
+.contenedor__todo {
     width: 100%;
     max-width: 800px;
     margin: auto;
     position: relative;
 }
 
-.caja__trasera{
+.caja__trasera {
     width: 100%;
     padding: 10px 20px;
     border-radius: 25px;
@@ -38,11 +48,11 @@ main{
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 128, 255, 0.5);
+    background-color: rgba(255, 72, 0, 0.651);
 
 }
 
-.caja__trasera div{
+.caja__trasera div {
     margin: 100px 40px;
     color: white;
     transition: all 500ms;
@@ -50,23 +60,24 @@ main{
 
 
 .caja__trasera div p,
-.caja__trasera button{
+.caja__trasera button {
     margin-top: 30px;
 }
 
-.caja__trasera div h3{
+.caja__trasera div h3 {
     font-weight: 400;
     font-size: 26px;
 }
 
-.caja__trasera div p{
+.caja__trasera div p {
     font-size: 16px;
     font-weight: 300;
 }
 
-.caja__trasera button{
+.caja__trasera button {
     padding: 10px 40px;
     border: 2px solid #fff;
+    border-radius: 2.5rem;
     font-size: 14px;
     background: transparent;
     font-weight: 600;
@@ -76,14 +87,14 @@ main{
     transition: all 300ms;
 }
 
-.caja__trasera button:hover{
+.caja__trasera button:hover {
     background: #fff;
-    color: #46A2FD;
+    color: #0eaa00;
 }
 
 /*Formularios*/
 
-.contenedor__login-register{
+.contenedor__login-register {
     display: flex;
     align-items: center;
     width: 100%;
@@ -96,37 +107,41 @@ main{
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.contenedor__login-register form{
+.contenedor__login-register form {
     width: 100%;
     padding: 80px 20px;
-    background: white;
     position: absolute;
+    background: white;
     border-radius: 20px;
+    border: 1px;
+    border-style: groove;
+    border-color: #0eaa00;
 }
 
-.contenedor__login-register form h2{
+.contenedor__login-register form h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: #46A2FD;
+    color: #0eaa00;
 }
 
-.contenedor__login-register form input{
+.contenedor__login-register form input {
     width: 100%;
     margin-top: 20px;
     padding: 10px;
     border: none;
+    border-radius: 25px;
     background: #F2F2F2;
     font-size: 16px;
     outline: none;
 }
 
-.contenedor__login-register form button{
+.contenedor__login-register form button {
     padding: 10px 40px;
     margin-top: 40px;
     border: none;
     font-size: 14px;
-    background: #46A2FD;
+    background:#0eaa00;
     font-weight: 600;
     cursor: pointer;
     color: white;
@@ -136,30 +151,31 @@ main{
 
 
 
-.formulario__login{
+.formulario__login {
     opacity: 1;
     display: block;
 }
-.formulario__register{
+
+.formulario__register {
     display: none;
 }
 
 
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
 
-    main{
+    main {
         margin-top: 50px;
     }
 
-    .caja__trasera{
+    .caja__trasera {
         max-width: 350px;
         height: 300px;
         flex-direction: column;
         margin: auto;
     }
 
-    .caja__trasera div{
+    .caja__trasera div {
         margin: 0px;
         position: absolute;
     }
@@ -167,28 +183,33 @@ main{
 
     /*Formularios*/
 
-    .contenedor__login-register{
+    .contenedor__login-register {
         top: -10px;
         left: -5px;
         margin: auto;
     }
 
-    .contenedor__login-register form{
+    .contenedor__login-register form {
         position: relative;
     }
 }
-.btn_enviar{
+
+.btn_enviar {
     padding: 10px 40px;
-    border-radius: 25px;
-    font-size:x-large;
+    border: 1px;
+    border-style: groove;
+    border-color: #0eaa00;
+    font-size: x-large;
     background: transparent;
     font-weight: 600;
     cursor: pointer;
-    color: #46A2FD;
+    color: #0eaa00;
     outline: none;
     transition: all 4ms;
+
 }
-.btn_enviar:hover{
-    background:#46A2FD;
+
+.btn_enviar:hover {
+    background: #0eaa00;
     color: white;
 }

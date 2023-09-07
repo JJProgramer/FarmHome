@@ -7,14 +7,17 @@
     <title>FarmHome-login</title>
     <link href="https://icons8.com/icons/set/home">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styleLogin2.css">
+    <link rel="stylesheet" href="../styles/styleLogin.css">
 </head>
 
 <body>
     <header>
-        <a href="../landingPage/index.php">
-          <!--  <img style="width: 200px;" src="../img/icon_home.gif" alt="Inicio">-->
-            <h2 style="position:absolute; left:70px;">Inicio</h2>
+        <div class="nombre-pagina">
+            <a id="inicio" href="../landingPage/index.php">
+                <ion-icon id="cloud" name="leaf"></ion-icon>
+                <span>FarmHome</span>
+            </a>
+        </div>
         </a>
     </header>
     <main>
@@ -81,7 +84,8 @@
         </div>
 
     </main>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../scripts/scriptLogin.js"></script>
 </body>
 

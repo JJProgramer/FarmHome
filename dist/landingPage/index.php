@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarmHome</title>
-    <link rel="stylesheet" href="../styles/styleLanding2.css">
+    <link rel="stylesheet" href="../styles/styleLanding3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
@@ -24,7 +24,7 @@
             </div>
             <button class="boton">
                 <a href="../login/login.php">
-                    <h2>Iniciar Sesion</h2>
+                    <h2>Login</h2>
                 </a>
             </button>
         </div>
@@ -45,25 +45,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#carrusel">
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                            <span>Destacados</span>
-                        </a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="../calculadora/calculadora.php">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <span>Herramientas</span>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../biblioteca/library.php" target="_blank">
+                        <a class="page-scroll" href="../biblioteca/library.php">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <span>Biblioteca</span>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../game/quiz/index.php" target="_blank">
+                        <a class="page-scroll" href="../game/quiz/index.php">
                             <ion-icon name="bookmark-outline"></ion-icon>
                             <span>Aprende</span>
                         </a>
@@ -162,8 +156,7 @@
                         <ion-icon id="cloud" name="leaf"></ion-icon>
                     </span>
                     <p class="text-muted">Sistema de recomendaciones inteligente para seleccionar combinaciones de
-                        plantas óptimas
-                        que promuevan un ecosistema equilibrado en el huerto urbano.</p>
+                        plantas.</p>
                     <a href="#ex3" rel="modal:open"><img src="../img/modal3.png" class="imgModal"></a>
                 </div>
             </div>

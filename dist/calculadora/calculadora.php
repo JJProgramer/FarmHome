@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+$userName = $_SESSION['userName'];
+
+if (isset($_SESSION['userName'])) {
+
+    ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,19 +43,19 @@
                             </a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../game/quiz/index.php" target="#"> 
+                            <a class="page-scroll" href="../biblioteca/library.php" > 
                                 <ion-icon name="file-tray-stacked-outline"></ion-icon>
                                 <span>Biblioteca</span>
                             </a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../game/quiz/index.php" target="#">
+                            <a class="page-scroll" href="../game/quiz/index.php">
                                 <ion-icon name="extension-puzzle"></ion-icon>
                                 <span>Aprende</span>
                             </a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#" target="#">
+                            <a class="page-scroll" href="#">
                                 <ion-icon name="game-controller"></ion-icon>
                                 <span>Simulador<br>de siembra</span>
                             </a>
@@ -176,3 +184,10 @@
 </body>
 
 </html>
+<?php
+} else {
+
+    header('Location: /FarmHome/dist/login/login.php');
+}
+
+?>

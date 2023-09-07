@@ -2,6 +2,11 @@
 include('../model/conexion.php');
 $query = "select * from planta";
 $resultado = mysqli_query($conn, $query);
+session_start();
+$userName = $_SESSION['userName'];
+
+if (isset($_SESSION['userName'])) {
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -43,7 +48,7 @@ $resultado = mysqli_query($conn, $query);
                             </a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../game/quiz/index.php" target="#">
+                            <a class="page-scroll" href="../calculadora/calculadora.php">
                                 <ion-icon name="calculator"></ion-icon>
                                 <span>Herramientas</span>
                             </a>
@@ -55,7 +60,7 @@ $resultado = mysqli_query($conn, $query);
                             </a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#" target="#">
+                            <a class="page-scroll" href="#">
                                 <ion-icon name="game-controller"></ion-icon>
                                 <span>Simulador<br>de siembra</span>
                             </a>
@@ -172,3 +177,10 @@ include('../template/footer.php')
 </body>
 
 </html>
+<?php
+} else {
+
+    header('Location: /FarmHome/dist/login/login.php');
+}
+
+?>
