@@ -217,7 +217,7 @@ a.active {
 
 a {
     text-decoration: none;
-    color: #79f775 !important;
+    color: #79f775;
 }
 
 a:hover,
@@ -226,6 +226,7 @@ a:active,
 a.active {
     color: #e6a862eb;
 }
+
 
 
 .navbar-default {
@@ -244,7 +245,7 @@ a.active {
     color: #e6a862eb;
 }
 
-.navbar-default {
+.navbar-default .navbar-collapse {
     border-color: rgba(255, 255, 255, .02);
 }
 
@@ -267,7 +268,7 @@ a.active {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #79f775 !important;
+    color: #79f775;
 }
 
 .navbar-default .nav li a:hover,
@@ -398,7 +399,7 @@ a.active {
 }
 
 .barra-lateral .usuario .info-usuario {
-    width: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -414,16 +415,16 @@ a.active {
 }
 
 .barra-lateral .usuario .nombre {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .barra-lateral .usuario .email {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .barra-lateral .usuario ion-icon {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
@@ -450,7 +451,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/img4.jpg);
+    background-image: url(../img/img5.jpg);
     backdrop-filter: blur(40px);
     background-position: center center;
     background-repeat: none;
@@ -468,20 +469,23 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 50px;
+}
+
+header .intro-text .intro-heading h3 {
+    margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
 }
 
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
+header .palabra {
+    color: #79f775;
 }
 
 @media(min-width:768px) {
@@ -490,81 +494,36 @@ header .intro-text .intro-heading {
         padding-bottom: 200px;
     }
 
-    header .intro-text .intro-lead-in {
+    header .intro-text .intro-lead-in h3 {
         margin-bottom: 30px;
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 50px;
+        font-size: 40px;
         font-style: italic;
         line-height: 40px;
     }
 
-    header .intro-text .intro-heading {
+    header .intro-text .intro-heading h3 {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
     }
 }
 
-/*buscar*/
-#buscar{
+/*Acerca de*/
+
+#about {
     display: flex;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin:2rem;
     width: 100%;
-    height: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    height: 500px;
     justify-content: center;
     align-items: center;
-}
-label{
-    font-size: 25px;
-}
-#buscar_1{
-    width: 300px;
-    height: 50px;
-    border-width: 2px;
-    border-radius: 25px;
-    font-size: 20px;
-    padding-left: 25px;
-}
-#buscar_1::placeholder {
-    font-size: 20px; 
-    color: #000000; 
-}
-
-.tarjeta {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; 
-    align-items: flex-start; 
+
 }
-
-.pltBuscada {
-    flex: 1;
-    max-width: 400px; 
-    margin: 10px; 
-}
-
-.pltNombre,
-.pltInfo {
-    text-align: center;
-}
-
-.pltImg {
-    text-align: center; 
-}
-
-.imgs {
-    max-width: 100%; /* Asegura que las imágenes sean responsivas */
-    height: auto;
-}
-
-
-
 
 
 /*? Esto es para la seleccion del texto de toda la pagina*/
