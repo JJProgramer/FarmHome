@@ -74,7 +74,7 @@
                         echo "Los campos son obligatorios";
                     } else {
 
-                        mysqli_query($conexion, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
+                        mysqli_query($conn, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
                         values ('$name','$userName','$password','$email')");
                     }
                     echo "REGISTRO EXITOSO";
