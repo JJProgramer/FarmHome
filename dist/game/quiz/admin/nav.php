@@ -34,11 +34,11 @@
         </li>
         <li>
 
-            <a href="../index.php" target="_blank">
+            <a href="../index.php">
                 <div class="icono" id="4">
                     <i class="fa-solid fa-globe"></i>
                 </div>
-                Quiz.com
+                Aprende.com
             </a>
         </li>
         <li>
