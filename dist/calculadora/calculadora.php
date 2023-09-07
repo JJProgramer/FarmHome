@@ -13,8 +13,7 @@ if (isset($_SESSION['userName'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FarmHome</title>
-        <link rel="stylesheet" href="../styles/styleCalculadora1.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link rel="stylesheet" href="../styles/styleCalculadora.css">
     </head>
 
     <body>
@@ -110,7 +109,9 @@ if (isset($_SESSION['userName'])) {
                 </div>
             </header>
             <!-- Acerca de -->
+            <h1>CONVERTIDOR DE UNIDADES</h1>
             <section id="about">
+                <h1>CONVERTIDOR DE UNIDADES</h1>
                 <div id="container2">
                     <select class="form-control" name="unidades" id="tipoUnidad"><!-- Selecciona el tipo de unidad que se va a emplear para la conversion -->
                         <option value="Longitud">Longitud</option>
@@ -172,11 +173,6 @@ if (isset($_SESSION['userName'])) {
             <script src="../scripts/menuLateral.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="../scripts/alertas.js"></script>
-
-            <!-- Remember to include jQuery :) -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-            <!-- jQuery Modal -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
             <?php
             include('../template/footer.php')

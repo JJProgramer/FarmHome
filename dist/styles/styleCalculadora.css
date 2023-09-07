@@ -515,14 +515,51 @@ header .palabra {
 /*Acerca de*/
 
 #about {
+    background: #79f7754d;
     display: flex;
-    margin:2rem;
-    width: 100%;
+    margin: 2rem;
+    width: 96%;
     height: 500px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border-radius: 15px;
 
+}
+
+h1 {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+select {
+    margin: 1rem;
+    padding: 1rem;
+    border: 15px;
+    border-style: inherit;
+    border-radius: 25px;
+    border-color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.valueContainer {
+    margin-left: 100px;
+    padding: 2rem;
+    font-size: 35px;
+}
+
+#value1,
+#value2 {
+    font-size: 20px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 250px;
+    height: 45px;
+    border: 2px;
+    border-radius: 25px;
 }
 
 
