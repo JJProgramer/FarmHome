@@ -118,7 +118,7 @@ CREATE TABLE `planta` (
   `pla_tipo` varchar(20) NOT NULL,
   `pla_color` varchar(20) NOT NULL,
   `pla_img` varchar(20) DEFAULT NULL,
-  `pla_info` varchar(200) NOT NULL,
+  `pla_info` varchar(2000) NOT NULL,
   `pla_href` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
