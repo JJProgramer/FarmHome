@@ -8,7 +8,7 @@ $numero = mysqli_num_rows($buscardor); ?>
         <?php echo $numero; ?>):
     </h3>
     <?php while ($resultado = mysqli_fetch_assoc($buscardor)) { ?>
-        <a class="pltBuscada" href="#" data-alert="Las hojas son unos órganos verdes que salen del tallo y que poseen funciones básicas para la planta, como son: Realizar la fotosíntesis, respiran y producen los alimentos. La respiración se produce durante el día y la noche; para ello, las plantas toman el oxígeno del aire y desprenden dióxido de carbono.  ">
+        <a class="pltBuscada" href="#">
             <h3><strong>
                     <?php echo $resultado['pla_nombre']; ?>
                 </strong></h3>
