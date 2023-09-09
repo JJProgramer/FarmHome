@@ -1,5 +1,5 @@
 <?php
-    include('conexion.php');
+    include('../model/conexion.php');
     session_start();
 
     $userName = $_POST['userName'];
@@ -7,20 +7,20 @@
 
     // Validar si los campos están vacíos
     if(empty($userName) || empty($password)) {
-        header("Location: /FarmHome/dist/login/login.php?error=empty");
+        header("Location:../login/login.php?error=empty");
         exit();
     } else {
         $sql = "SELECT * FROM registrouser WHERE userName = '$userName' AND password = '$password'";
-        $resultado = $conexion->query($sql);
+        $resultado = $conn->query($sql);
 
         $row = $resultado->fetch_assoc();
 
         // Validar si los campos están correctos para iniciar
         if($row['userName'] == $userName && $row['password'] == $password ){
             $_SESSION['userName'] = $userName;
-            header("Location: /FarmHome/dist/main/main.php");
+            header("Location:../main/main.php");
         } else {
-            header("Location: /FarmHome/dist/login/login.php?error=invalid");
+            header("Location:../login/login.php?error=invalid");
             exit();
         }
     }

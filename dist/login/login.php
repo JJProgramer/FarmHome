@@ -56,7 +56,7 @@
                     <input type="submit" id="enviar" class="btn_enviar" value="Registar" name="btn_registrar">
                 </form>
                 <?php
-                include("conexion.php");
+                include("../model/conexion.php");
 
                 $name = "";
                 $userName = "";
@@ -74,7 +74,7 @@
                         echo "Los campos son obligatorios";
                     } else {
 
-                        mysqli_query($conexion, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
+                        mysqli_query($conn, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
                         values ('$name','$userName','$password','$email')");
                     }
                     echo "REGISTRO EXITOSO";

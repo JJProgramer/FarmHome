@@ -217,7 +217,6 @@ function altervelocidadUnit(unit){
 
 }
 
-
 function convertTemoature(value, scale1, scale2){
     
   var temp;

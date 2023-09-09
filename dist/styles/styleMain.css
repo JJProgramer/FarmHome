@@ -141,7 +141,7 @@ body {
 .barra-lateral .boton {
     width: 100%;
     height: 45px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,8 +152,8 @@ body {
 }
 
 .barra-lateral .boton ion-icon {
-    min-width: 60px;
-    font-size: 15px;
+    min-width: 50px;
+    font-size: 25px;
 }
 
 
@@ -226,6 +226,7 @@ a:active,
 a.active {
     color: #e6a862eb;
 }
+
 
 
 .navbar-default {
@@ -398,7 +399,7 @@ a.active {
 }
 
 .barra-lateral .usuario .info-usuario {
-    width: 200px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -414,16 +415,16 @@ a.active {
 }
 
 .barra-lateral .usuario .nombre {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .barra-lateral .usuario .email {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .barra-lateral .usuario ion-icon {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
@@ -450,7 +451,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/img1.jpg);
+    background-image: url(../img/img5.jpg);
     backdrop-filter: blur(40px);
     background-position: center center;
     background-repeat: none;
@@ -468,20 +469,23 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 50px;
+}
+
+header .intro-text .intro-heading h3 {
+    margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
 }
 
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
+header .palabra {
+    color: #79f775;
 }
 
 @media(min-width:768px) {
@@ -490,15 +494,15 @@ header .intro-text .intro-heading {
         padding-bottom: 200px;
     }
 
-    header .intro-text .intro-lead-in {
+    header .intro-text .intro-lead-in h3 {
         margin-bottom: 30px;
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 50px;
+        font-size: 40px;
         font-style: italic;
         line-height: 40px;
     }
 
-    header .intro-text .intro-heading {
+    header .intro-text .intro-heading h3 {
         margin-bottom: 50px;
         text-transform: uppercase;
         font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -511,143 +515,31 @@ header .intro-text .intro-heading {
 /*Acerca de*/
 
 #about {
-    margin: 5rem;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    height: 50vh;
-}
-
-.custom-row {
-    margin-top: 2rem;
-    display: flex;
-    padding-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 100%;
-    /* Establece un ancho máximo */
-    margin: 0 auto;
-    /* Centra horizontalmente dentro de #about */
-}
-
-.custom-row h1 {
-    margin: 10px;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 40px;
-
-}
-
-.custom-col {
-    flex: 1;
-    text-align: center;
-}
-
-.imgModal {
-    margin-top: 20px;
-    max-width: 100%;
-    /* Ajusta este valor según sea necesario */
-    height: 200px;
-    border-radius: 25px;
-    box-shadow: 10px 10px 6px rgb(0, 0, 0, 0, 68);
-
-}
-
-.about-heading {
-    margin: 10px 0;
-    text-transform: none;
-
-}
-
-.custom-col:nth-last-child(-n+2) {
-    justify-content: center;
-    /* Centra verticalmente los dos últimos elementos */
-}
-
-@media(min-width:200px) {
-    #about {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
-
-/*Modales*/
-
-
-.info-modal p {
-    text-decoration: none;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: justify;
-    font-size: 20px;
-    padding-bottom: 10px;
-    color: #000000;
-}
-
-.cerrar {
-    font-size: 20px;
-}
-
-.info-modal h2 {
-    text-align: center;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: justify;
-    font-size: 20px;
-    padding-bottom: 15px;
-
-}
-
-.info-modal img {
-    width: 100%;
-    border-radius: 25px;
-}
-
-/*CARRUSEL IMGS*/
-#carrusel {
-    /*    background: -webkit-linear-gradient(rgba(1, 70, 38, 0.89), rgba(0, 160, 72, 0.849), 
-    rgb(51, 255, 0),rgba(0, 160, 72, 0.849),rgba(1, 70, 38, 0.89)); */
-    margin: 5rem;
-    background-position: center center;
-    background-repeat: none;
-}
-
-.carrusel {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-}
-
-.carrusel-items {
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 30px 0px;
-}
-
-.carrusel-item {
-    min-width: 400px;
-    max-width: 400px;
-    height: 250px;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.carrusel-item img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
-.carrusel-item:hover {
-    transform: scale(1.2);
+h1, h3, img {
+    margin-bottom: 20px;
 }
 
-/**/Hojas
+.color {
+    color: #79f775;
+}
+
+
+
+/*HOJASSSS*/
+
 .leaves {
     position: absolute;
-    width: 100%;
-    height: 230%;
+    width: 85%;
+    height: 120%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -659,7 +551,7 @@ header .intro-text .intro-heading {
 .leaves .set {
     position: absolute;
     width: 100%;
-    height: 257%;
+    height: 100%;
     top: 0;
     left: 0;
     pointer-events: none;
@@ -787,6 +679,10 @@ header .intro-text .intro-heading {
         transform: translateX(20px) rotate(225deg);
     }
 }
+
+
+
+
 
 
 
