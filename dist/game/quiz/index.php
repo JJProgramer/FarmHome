@@ -27,16 +27,19 @@ if (isset($_SESSION['userName'])) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./estilo1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link href="https://icons8.com/icons/set/home">
+        <link rel="stylesheet" href="./estilo.css">
         <title>FarmHome</title>
     </head>
 
     <body>
-        <a href="/farmhome/dist/main/main.php">
-            <!--  <img style="width: 200px;" src="../img/icon_home.gif" alt="Inicio">-->
-            <h2 style="position:absolute; left:70px;">Inicio</h2>
-        </a>
+        <div class="nombre-pagina">
+            <a id="inicio" href="../landingPage/index.php">
+                <ion-icon id="cloud" name="leaf"></ion-icon>
+                <span>FarmHome</span>
+            </a>
+        </div>
         <div class="container" id="container">
             <div class="left">
                 <div class="logo">
@@ -61,6 +64,8 @@ if (isset($_SESSION['userName'])) {
             </div>
         </div>
     </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     </html>
 <?php
