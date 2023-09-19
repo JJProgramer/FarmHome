@@ -1,5 +1,5 @@
 <?php
-$contrasena = "Santiago2004_";
+$contrasena = "Santiago2004";
 $usuario    = "u985211323_admin";
 $nombre_bd  = "u985211323_farmhomedb";
 
