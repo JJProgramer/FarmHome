@@ -1,5 +1,5 @@
-
-<!--$contrasena = "Santiago2004_";
+<?php
+$contrasena = "Santiago2004_";
 $usuario    = "u985211323_admin";
 $nombre_bd  = "u985211323_farmhomedb";
 
@@ -9,10 +9,10 @@ try {
 	echo "Hay algún problema con la conexión: ".$e->getMessage();
 }
 
--->
+?>
 
 
- <?php
+<!-- 
 $contrasena = "";
 $usuario    = "root";
 $nombre_bd  = "farmhomedb";
@@ -22,4 +22,5 @@ try {
 	$conn = mysqli_connect('localhost','root','','farmhomedb');} catch (Exception $e) {
 	echo "Hay algún problema con la conexión: ".$e->getMessage();
 }
-?>
+
+-->
