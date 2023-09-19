@@ -174,7 +174,7 @@ if (isset($_SESSION['userName'])) {
             <script src="../scripts/alertas.js"></script>
 
             <?php
-            include('../template/footer.php')
+            include('../template/footerm.php')
             ?>
     </body>
 

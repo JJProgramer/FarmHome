@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FarmHome</title>
-    <link rel="stylesheet" href="./styles/styleFooter.css">
+    <link rel="stylesheet" href="../styles/styleFooter.css">
 </head>
 <!-- partial:index.partial.html -->
 

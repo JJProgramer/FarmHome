@@ -644,10 +644,14 @@ header .intro-text .intro-heading {
 }
 
 /**/Hojas
+.hojas{
+    margin:0;
+    padding:0;
+}
 .leaves {
     position: absolute;
-    width: 85%;
-    height: 120%;
+    width: 80%;
+    height: 253%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -664,6 +668,7 @@ header .intro-text .intro-heading {
     left: 0;
     pointer-events: none;
 }
+
 .leaves img {
     width: 45px;
     height: auto;
@@ -786,8 +791,6 @@ header .intro-text .intro-heading {
         transform: translateX(20px) rotate(225deg);
     }
 }
-
-
 
 
 

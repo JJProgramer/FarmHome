@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarmHome</title>
-    <link rel="stylesheet" href="../styles/styleLanding.css">
+    <link rel="stylesheet" href="styles/styleLanding.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
@@ -23,7 +23,7 @@
                 <span>FarmHome</span>
             </div>
             <button class="boton">
-                <a href="../login/login.php">
+                <a href="login/login.php">
                     <h2>Login</h2>
                 </a>
             </button>
@@ -45,19 +45,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../calculadora/calculadora.php">
+                        <a class="page-scroll" href="calculadora/calculadora.php">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <span>Herramientas</span>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../biblioteca/library.php">
+                        <a class="page-scroll" href="biblioteca/library.php">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <span>Biblioteca</span>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../game/quiz/index.php">
+                        <a class="page-scroll" href="game/quiz/index.php">
                             <ion-icon name="bookmark-outline"></ion-icon>
                             <span>Aprende</span>
                         </a>
@@ -84,8 +84,8 @@
             </div>
 
             <div class="usuario">
-                <a href="../login/login.php">
-                    <img src="../img/user1.png" alt="">
+                <a href="login/login.php">
+                    <img src="img/user1.png" alt="">
                     <div class="info-usuario">
                         <div class="nombre-email">
                             <span class="nombre">No has<br> iniciado Sesion</span>
@@ -103,22 +103,22 @@
         <section id="hojas">
             <div class="leaves">
                 <div class="set">
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/leaf3.png"></div>
-                    <div><img src="../img/leaves/imagen1.png"></div>
-                    <div><img src="../img/leaves/imagen1.png"></div>
-                    <div><img src="../img/leaves/imagen1.png"></div>
-                    <div><img src="../img/leaves/imagen2.png"></div>
-                    <div><img src="../img/leaves/imagen2.png"></div>
-                    <div><img src="../img/leaves/imagen2.png"></div>
-                    <div><img src="../img/leaves/imagen3.png"></div>
-                    <div><img src="../img/leaves/imagen3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/leaf3.png"></div>
+                    <div><img src="img/leaves/imagen1.png"></div>
+                    <div><img src="img/leaves/imagen1.png"></div>
+                    <div><img src="img/leaves/imagen1.png"></div>
+                    <div><img src="img/leaves/imagen2.png"></div>
+                    <div><img src="img/leaves/imagen2.png"></div>
+                    <div><img src="img/leaves/imagen2.png"></div>
+                    <div><img src="img/leaves/imagen3.png"></div>
+                    <div><img src="img/leaves/imagen3.png"></div>
                 </div>
         </section>
         <header>
@@ -141,7 +141,7 @@
                     </span>
                     <p class="text-muted">Información precisa sobre plantas compatibles en cada zona, considerando
                         clima, suelo y condiciones locales.</p>
-                    <a href="#ex1" rel="modal:open"><img src="../img/modal1.jpg" class="imgModal"></a>
+                    <a href="#ex1" rel="modal:open"><img src="img/modal1.jpg" class="imgModal"></a>
                 </div>
                 <div class="custom-col">
                     <span class="fa-stack fa-4x">
@@ -149,7 +149,7 @@
                     </span>
                     <p class="text-muted">Herramientas de medición y diseño del espacio de cultivo para optimizar el uso
                         del espacio disponible.</p>
-                    <a href="#ex2" rel="modal:open"><img src="../img/modal2.jpeg" class="imgModal"></a>
+                    <a href="#ex2" rel="modal:open"><img src="img/modal2.jpeg" class="imgModal"></a>
                 </div>
                 <div class="custom-col">
                     <span class="fa-stack fa-4x">
@@ -157,7 +157,7 @@
                     </span>
                     <p class="text-muted">Sistema de recomendaciones inteligente para seleccionar combinaciones de
                         plantas.</p>
-                    <a href="#ex3" rel="modal:open"><img src="../img/modal3.png" class="imgModal"></a>
+                    <a href="#ex3" rel="modal:open"><img src="img/modal3.png" class="imgModal"></a>
                 </div>
             </div>
 
@@ -166,7 +166,7 @@
             <div id="ex1" class="modal info-modal">
                 <h2>Aprendizaje</h2>
                 <div>
-                    <img src="../img/modal1.jpg" alt="200px">
+                    <img src="img/modal1.jpg" alt="200px">
                 </div>
                 <p>FamHome ofrece a sus usuarios un apartado donde podran aprender diversos conceptos de plantas de la
                     region o provincia donde se encuentran ubicados</p>
@@ -180,7 +180,7 @@
             <div id="ex2" class="modal info-modal">
                 <h2>Calculadora</h2>
                 <div>
-                    <img src="../img/modal2.jpeg" alt="200px">
+                    <img src="img/modal2.jpeg" alt="200px">
                 </div>
                 <p>¿Necesitas realizar calculos aritmeticos y de convercion de unidades?</p>
                 <P>En FarmHome podras realizar conversiones de unidades para saber con exactitud las medidas de tu
@@ -191,7 +191,7 @@
             <div id="ex3" class="modal info-modal">
                 <h2>Simulador</h2>
                 <div>
-                    <img src="../img/modal3.png" alt="200px">
+                    <img src="img/modal3.png" alt="200px">
                 </div>
                 <p>Brindamos a nuestros usuarios un apartado donde podran simular la siembra de algunas plantas y el
                     tiempo estimado para realizar la cosecha. </p>
@@ -208,40 +208,40 @@
             <div class="carrusel">
                 <div class="carrusel-items">
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta1.jpg" alt="" />
+                        <img src="img/carrusel/planta1.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta2.jpg" alt="" />
+                        <img src="img/carrusel/planta2.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta3.jpg" alt="" />
+                        <img src="img/carrusel/planta3.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta4.jpg" alt="" />
+                        <img src="img/carrusel/planta4.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta5.jpg" alt="" />
+                        <img src="img/carrusel/planta5.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta6.jpg" alt="" />
+                        <img src="img/carrusel/planta6.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta1.jpg" alt="" />
+                        <img src="img/carrusel/planta1.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta2.jpg" alt="" />
+                        <img src="img/carrusel/planta2.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta3.jpg" alt="" />
+                        <img src="img/carrusel/planta3.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta4.jpg" alt="" />
+                        <img src="img/carrusel/planta4.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta5.jpg" alt="" />
+                        <img src="img/carrusel/planta5.jpg" alt="" />
                     </div>
                     <div class="carrusel-item">
-                        <img src="../img/carrusel/planta6.jpg" alt="" />
+                        <img src="img/carrusel/planta6.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -251,7 +251,7 @@
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script src="../scripts/menuLateral.js"></script>
+        <script src="scripts/menuLateral.js"></script>
 
         <!-- Remember to include jQuery :) -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -290,7 +290,7 @@
             start();
         </script>
         <?php
-        include('../template/footer.php')
+        include('template/footer.php')
             ?>
 </body>
 

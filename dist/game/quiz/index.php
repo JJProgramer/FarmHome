@@ -35,7 +35,7 @@ if (isset($_SESSION['userName'])) {
 
     <body>
         <div class="nombre-pagina">
-            <a id="inicio" href="../landingPage/index.php">
+            <a id="inicio" href="/Farmhome/dist/main/main.php">
                 <ion-icon id="cloud" name="leaf"></ion-icon>
                 <span>FarmHome</span>
             </a>

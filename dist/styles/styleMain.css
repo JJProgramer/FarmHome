@@ -535,11 +535,14 @@ h1, h3, img {
 
 
 /*HOJASSSS*/
-
+.hojas{
+    margin:0;
+    padding:0;
+}
 .leaves {
     position: absolute;
-    width: 85%;
-    height: 120%;
+    width: 80%;
+    height: 190%;
     overflow: hidden;
     display: flex;
     justify-content: center;

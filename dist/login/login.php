@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="nombre-pagina">
-            <a id="inicio" href="../landingPage/index.php">
+            <a id="inicio" href="../index.php">
                 <ion-icon id="cloud" name="leaf"></ion-icon>
                 <span>FarmHome</span>
             </a>

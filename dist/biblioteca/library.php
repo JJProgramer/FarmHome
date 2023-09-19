@@ -157,7 +157,7 @@ if (isset($_SESSION['userName'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <?php
-    include('../template/footer.php')
+    include('../template/footerm.php')
     ?>
     </body>
 
@@ -169,4 +169,3 @@ if (isset($_SESSION['userName'])) {
 }
 
 ?>
-<!-- quejeso -->

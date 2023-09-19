@@ -1,6 +1,6 @@
 <?php
 
-    include("conexion.php");
+    include("model/conexion.php");
     $id = $_GET['idPregunta'];
 
     $query = "DELETE FROM preguntas WHERE id = '$id'";

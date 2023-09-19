@@ -12,7 +12,7 @@ include("funciones.php");
 //ACTUALIZAMOSS LA PREGUNTA
 if (isset($_GET['actualizar'])) {
     //nos conectamos a la base de datos
-    include("conexion.php");
+    include("model/conexion.php");
 
     //tomamos los datos que vienen del formulario
     $id_pregunta = $_GET['idPregunta'];

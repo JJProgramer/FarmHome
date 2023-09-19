@@ -14,7 +14,7 @@ $config = obtenerConfiguracion();
 //ACTUALIZAMOSS LA CONFIGURACION
 if (isset($_GET['actualizar'])) {
     //nos conectamos a la base de datos
-    include("conexion.php");
+    include("model/conexion.php");
 
     //tomamos los datos que vienen del formulario
     $usuario = $_GET['usuario'];
@@ -35,7 +35,7 @@ if (isset($_GET['actualizar'])) {
 //ELIMINAR PREGUNTAS
 if (isset($_GET['eliminarPreguntas'])) {
     //nos conectamos a la base de datos
-    include("conexion.php");
+    include("model/conexion.php");
     //sentiencia para eliminar los datos de la tabla
     $query ="TRUNCATE TABLE preguntas";
     //eliminamos los datos de la tabla preguntas
@@ -49,7 +49,7 @@ if (isset($_GET['eliminarPreguntas'])) {
 //ELIMINAMOS LAS PREGUNTAS Y LAS CATEGORIAS
 if (isset($_GET['eliminarTodo'])) {
     //nos conectamos a la base de datos
-    include("conexion.php");
+    include("model/conexion.php");
     //sentiencia para eliminar los datos de la tabla
     $query1 ="TRUNCATE TABLE preguntas";
     $query2 ="TRUNCATE TABLE temas";

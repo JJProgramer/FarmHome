@@ -3,7 +3,7 @@
 
     session_destroy();
 
-    header('Location: ../landingPage/index.php');
+    header('Location: ../index.php');
 
 
 ?>

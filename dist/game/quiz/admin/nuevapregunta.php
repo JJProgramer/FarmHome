@@ -20,7 +20,7 @@ if(isset($_GET['nuevoTema'])){
 //GUARDAMOS LA PREGUNTA
 if (isset($_GET['guardar'])) {
     //nos conectamos a la base de datos
-    include("conexion.php");
+    include("model/conexion.php");
 
     //tomamos los datos que vienen del fosrmulario
     // elimina texto con formato de etiqueta html

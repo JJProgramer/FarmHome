@@ -63,7 +63,7 @@ if(isset($_GET['siguiente'])){//Ya esta jugando
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FarmHome</title>
-    <link rel="stylesheet" href="./estilo1.css">
+    <link rel="stylesheet" href="./estilo.css">
 </head>
 <body>
     <div class="container-juego" id="container-juego">
@@ -71,7 +71,7 @@ if(isset($_GET['siguiente'])){//Ya esta jugando
             <div class="categoria">
                 <?php echo obtenerNombreTema($preguntaActual['tema']) ?>
             </div>
-            <a href="index.php">Inicio</a>
+            <a href="./index.php">Inicio</a>
         </header>
         <div class="info">
             <div class="estadoPregunta">
