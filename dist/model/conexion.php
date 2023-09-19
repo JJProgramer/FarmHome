@@ -1,12 +1,14 @@
 <?php
+$server ="localhost";
 $contrasena = "Santiago2004";
 $usuario    = "u985211323_admin";
 $nombre_bd  = "u985211323_farmhomedb";
 
-$tabla_db1 = "registrouser"; 
+$tabla_db1 = "registrouser";
 try {
-	$conn = mysqli_connect('localhost',$usuario,$contrasena,$nombre_bd);} catch (Exception $e) {
-	echo "Hay algún problema con la conexión: ".$e->getMessage();
+	$conn = mysqli_connect($server, $usuario, $contrasena, $nombre_bd);
+} catch (Exception $e) {
+	echo "Hay algún problema con la conexión: " . $e->getMessage();
 }
 
 ?>
