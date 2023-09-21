@@ -1,28 +1,34 @@
 <?php
-    include('../model/conexion.php');
-    session_start();
+include('../model/conexion.php');
+session_start();
 
-    $userName = $_POST['userName'];
-    $password = $_POST['password'];
+if (isset($_POST['btn_iniciar'])) {
+    
+    if (strlen($_POST['userName']) >= 1 && strlen($_POST['password']) >= 1){
+    
+    $userName = trim($_POST['userName']);
+    $password = trim($_POST['password']);
 
-    // Validar si los campos están vacíos
-    if(empty($userName) || empty($password)) {
-        echo "Llena todos los espacios";
+    $sql = "SELECT * FROM registrouser WHERE userName = '$userName' AND password = '$password'";
+    $resultado = $conn->query($sql);
+    $row = $resultado->fetch_assoc();
+
+    if ($userName == $row['userName'] && $password == $row['password']) {
+        $_SESSION['userName'] = $userName;
+
+        header("Location:../main/main.php");
         exit();
     } else {
-        $sql = "SELECT * FROM registrouser WHERE userName = '$userName' AND password = '$password'";
-        $resultado = $conn->query($sql);
-        $row = $resultado->fetch_assoc();
-
-        // Validar si los campos están correctos para iniciar
-        if($row['userName'] == $userName && $row['password'] == $password ){
-            $_SESSION['userName'] = $userName;
-            echo "Bienvendo a farmhome";
-            header("Location:../main/main.php");
-        } else {
-            header("Location:../login/login.php?error=invalid");
-            exit();
-        }
+        header("Location: ../login/login.php?error=invalid");
+        exit();
     }
+    } else {
+        ?>
+            <script>
+                alert("Llene todos los campos");
+            </script>
+        <?php
+        exit();
+    }
+}
 ?>
-

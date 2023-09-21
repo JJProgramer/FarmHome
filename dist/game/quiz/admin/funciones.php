@@ -2,7 +2,7 @@
 //Función para obtener el registro de la configuración del sitio
 function obtenerConfiguracion()
 {
-    include('model/conexion.php');
+    include('../../model/conexion.php');
     //Comprobamos si existe el registro 1 que mantiene la configuraciòn
     //Añadimos un alias AS total para identificar mas facil
     $query = "SELECT COUNT(*) AS total FROM config";
@@ -31,7 +31,7 @@ function obtenerConfiguracion()
 
 //funcion para agrear un nuevo tema a la BD
 function agregarNuevoTema($tema){
-    include('model/conexion.php');
+    include('../../model/conexion.php');
     //armamos el query para insertar en la tabla temas
     $query = "INSERT INTO temas (id, nombre)
     VALUES (NULL, '$tema')";
@@ -49,13 +49,13 @@ function agregarNuevoTema($tema){
 
 function obetenerTodosLosTemas()
 {
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     $query = "SELECT * FROM temas";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 function obtenerNombreTema($id){
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     $query = "SELECT * FROM temas WHERE id = '$id'";
     $result = mysqli_query($conn, $query);
     $tema = mysqli_fetch_array($result);
@@ -65,14 +65,14 @@ function obtenerNombreTema($id){
 
 function obetenerTodasLasPreguntas()
 {
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     $query = "SELECT * FROM preguntas";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 
 function obtenerPreguntaPorId($id){
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     $query = "SELECT * FROM preguntas WHERE id = $id";
     $result = mysqli_query($conn, $query);
     $pregunta = mysqli_fetch_array($result);
@@ -80,7 +80,7 @@ function obtenerPreguntaPorId($id){
 }
 
 function obtenerTotalPreguntas(){
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     //Añadimos un alias AS total para identificar mas facil
     $query = "SELECT COUNT(*) AS total FROM preguntas";
     $result = mysqli_query($conn, $query);
@@ -89,7 +89,7 @@ function obtenerTotalPreguntas(){
 }
 
 function totalPreguntasPorCategoria($tema){
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     $query = "SELECT COUNT(*) AS total FROM preguntas WHERE tema = '$tema'";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);  
@@ -97,20 +97,20 @@ function totalPreguntasPorCategoria($tema){
 }
 
 function obtenerCategorias(){
-    include('model/conexion.php');
+        include('../../model/conexion.php');
     //ACOntamos la cantidad de cada categoria
     $query = "SELECT tema, COUNT(DISTINCT tema) FROM preguntas GROUP BY tema";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 function obtenerIdsPreguntasPorCategoria($tema){
-    include('model/conexion.php');
+    include('../../model/conexion.php');
     $query = "SELECT id FROM preguntas WHERE tema = $tema";
     $result = mysqli_query($conn, $query);
     return $result;
 }
 function aumentarVisita(){
-    include('model/conexion.php');
+    include('../../model/conexion.php');
     //Selecciono el registro de la estadistica
     $query = "SELECT * FROM estadisticas  WHERE id='1'";
     $result = mysqli_query($conn, $query);
@@ -122,7 +122,7 @@ function aumentarVisita(){
     $result = mysqli_query($conn, $query);
 }
 function aumentarRespondidas(){
-    include('model/conexion.php');
+    include('../../model/conexion.php');
     //Selecciono el registro de la estadistica
     $query = "SELECT * FROM estadisticas  WHERE id='1'";
     $result = mysqli_query($conn, $query);
@@ -134,7 +134,7 @@ function aumentarRespondidas(){
     $result = mysqli_query($conn, $query);
 }
 function aumentarCompletados(){
-    include('model/conexion.php');
+    include('../../model/conexion.php');
     //Selecciono el registro de la estadistica
     $query = "SELECT * FROM estadisticas  WHERE id='1'";
     $result = mysqli_query($conn, $query);

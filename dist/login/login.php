@@ -8,6 +8,8 @@
     <link href="https://icons8.com/icons/set/home">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styleLogin.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -39,7 +41,7 @@
             <!--Formulario de Login y registro-->
             <div class="contenedor__login-register">
                 <!--Login-->
-                <form action="validacion.php" id="form-session" method="post" class="formulario__login">
+                <form id="form-session" method="post" class="formulario__login">
                     <h2>Iniciar Sesión</h2>
                     <input type="text" name="userName" placeholder="Nombre Usuario">
                     <input type="password" name="password" placeholder="Contraseña">
@@ -86,5 +88,10 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="../scripts/scriptLogin.js"></script>
 </body>
+
+<?php
+
+    include ('../login/validacion.php');
+?>
 
 </html>
