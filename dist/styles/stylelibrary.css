@@ -523,6 +523,15 @@ header .intro-text .intro-heading {
 label{
     font-size: 25px;
 }
+select {
+    margin: 1rem;
+    padding: 1rem;
+    border: 15px;
+    border-style: inherit;
+    border-radius: 25px;
+    border-color: rgb(0, 0, 0);
+    font-size: 20px;
+}
 #buscar_1{
     width: 300px;
     height: 50px;
@@ -546,11 +555,10 @@ label{
 .pltBuscada {
     flex: 1;
     max-width: 400px; 
-    margin: 10px; 
+    margin: 5px; 
 }
 
-.pltNombre,
-.pltInfo {
+.pltNombre {
     text-align: center;
 }
 
@@ -559,9 +567,12 @@ label{
 }
 
 .imgs {
-    max-width: 100%; /* Asegura que las imágenes sean responsivas */
-    height: auto;
+    width: 350px; 
+    height: 400px;
 }
+
+
+
 
 
 

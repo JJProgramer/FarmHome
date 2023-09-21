@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-09-2023 a las 04:15:05
+-- Tiempo de generación: 21-09-2023 a las 17:16:21
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -39,7 +39,7 @@ CREATE TABLE `config` (
 --
 
 INSERT INTO `config` (`id`, `usuario`, `password`, `totalPreguntas`) VALUES
-(1, 'admin', 'admin', 5);
+(1, 'admin', 'admin', 4);
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,7 @@ CREATE TABLE `estadisticas` (
 --
 
 INSERT INTO `estadisticas` (`id`, `visitas`, `respondidas`, `completados`) VALUES
-(1, 57, 52, 7);
+(1, 115, 64, 10);
 
 -- --------------------------------------------------------
 
@@ -73,16 +73,16 @@ CREATE TABLE `municipio` (
   `mun_grado` float NOT NULL,
   `mun_piso` enum('Cálido','Templado','Frío','Muy frío') NOT NULL,
   `mun_altitud` int(11) NOT NULL,
-  `reg_id` int(11) NOT NULL
+  `prov_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `municipio`
 --
 
-INSERT INTO `municipio` (`mun_id`, `mun_nombre`, `mun_grado`, `mun_piso`, `mun_altitud`, `reg_id`) VALUES
-(1, 'Mosquera', 13.5, 'Templado', 2516, 1),
-(2, 'Funza', 14.3, 'Templado', 2529, 1),
+INSERT INTO `municipio` (`mun_id`, `mun_nombre`, `mun_grado`, `mun_piso`, `mun_altitud`, `prov_id`) VALUES
+(1, 'Mosquera', 13.5, 'Templado', 2516, 2),
+(2, 'Funza', 14.3, 'Templado', 2529, 2),
 (3, 'Villeta', 20.4, 'Cálido', 845, 1);
 
 -- --------------------------------------------------------
@@ -118,18 +118,20 @@ CREATE TABLE `planta` (
   `pla_tipo` varchar(20) NOT NULL,
   `pla_color` varchar(20) NOT NULL,
   `pla_img` varchar(20) DEFAULT NULL,
-  `pla_info` varchar(2000) NOT NULL,
-  `pla_href` varchar(30) NOT NULL
+  `pla_info` varchar(1000) NOT NULL,
+  `pla_uso` varchar(1000) NOT NULL,
+  `pla_siembra` varchar(3000) NOT NULL,
+  `pla_cosecha` varchar(3000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `planta`
 --
 
-INSERT INTO `planta` (`pla_id`, `pla_nombre`, `pla_tipo`, `pla_color`, `pla_img`, `pla_info`, `pla_href`) VALUES
-(1, 'Coco', 'Palmera', 'café', 'coco.jpg', 'El coco es una fruta obtenida principalmente de la especie tropical cocotero (Cocos nucifera), la palmera más cultivada a nivel mundial. El coco es una drupa, una fruta con una capa exterior gruesa (e', ''),
-(2, 'manzana', 'Rosácea', 'rojo', 'manzana.jpg', 'El manzano es una especie de árbol frutal de la familia Rosaceae, cultivado por su fruto, la manzana. Su nombre científico es Malus domestica. Es un árbol de mediano tamaño, inerme, caducifolio, de co', ''),
-(3, 'Mangífera', 'Anacardiacea', 'Amarillo', 'mango.jpg', 'La mangifera es un género de plantas que pertenece a la familia de las anacardiáceas. Este género contiene alrededor de 69 especies, siendo la más conocida el mango común (Mangifera indica). El mango ', 'https://co.siembraco.com/MANGO');
+INSERT INTO `planta` (`pla_id`, `pla_nombre`, `pla_tipo`, `pla_color`, `pla_img`, `pla_info`, `pla_uso`, `pla_siembra`, `pla_cosecha`) VALUES
+(1, 'Palmera', 'Palmera', 'café', 'coco.jpg', 'La palmera es una familia de plantas conocida como Arecaceae o Palmae. Estas plantas son ampliamente reconocidas por su apariencia característica, con un solo tronco largo y delgado coronado por un conjunto de hojas en forma de plumas o abanicos. Las palmas son un grupo diverso que incluye una gran variedad de especies, muchas de las cuales se encuentran en regiones tropicales y subtropicales de todo el mundo.', 'Las palmeras tienen una gran importancia económica y cultural en muchas partes del mundo. Sus frutos, como el coco, las fechas y las palmas aceiteras, son valiosos alimentos y fuentes de aceite. Las hojas de palma se utilizan para tejer cestas, techos, sombreros y otros productos artesanales. Además, las palmas ornamentales se plantan en jardines y paisajes por su belleza.', 'Para sembrar palmeras, primero debes elegir la especie adecuada según el clima de tu región, ya que la mayoría de las palmeras prosperan en climas cálidos y tropicales, aunque algunas toleran climas subtropicales o templados. Asegúrate de que el suelo sea bien drenado y ligeramente ácido a alcalino, y enriquece el suelo con materia orgánica como compost. Al plantar, excava un hoyo amplio, coloca la palma de manera que quede al nivel del suelo circundante y riega bien. Mantén un programa de riego regular, evitando el encharcamiento, y considera el uso de fertilizantes específicos para palmeras. La poda de hojas muertas es importante, y protege las palmas del frío extremo si tu zona es propensa a heladas. Asegúrate de investigar las necesidades específicas de la especie de palma que deseas plantar y adapta el proceso según las condiciones locales.', 'La cosecha de productos de palma, como los cocos, dátiles o aceite de palma, es un proceso crítico que involucra la recolección de frutos maduros. Los cocos, por ejemplo, se cosechan cuando cambian de color de verde a marrón, utilizando varas largas con cuchillas para cortar los cocos de los árboles y recogerlos con cuidado del suelo. En el caso de los dátiles, la cosecha se realiza cuando están en su punto máximo de dulzura y se retiran manualmente de las palmas datileras con la ayuda de escaleras o herramientas de recolección. Por otro lado, la cosecha del aceite de palma involucra la recolección de racimos de frutas maduras, que se cortan de las palmas aceiteras y se procesan en instalaciones de extracción de aceite. Es crucial llevar a cabo estas actividades de manera responsable y sostenible para garantizar la calidad del producto y minimizar el impacto ambiental y social asociado.'),
+(2, 'Manzano', 'Rosaceae', 'rojo', 'manzano.jpg', ' El manzano es un árbol caducifolio que puede variar en tamaño, desde unos pocos metros hasta alrededor de 12 metros de altura, dependiendo de la variedad y las condiciones de cultivo. Sus hojas son ovaladas y dentadas, y pueden tener diferentes tonos de verde. Hay innumerables variedades de manzanos en todo el mundo, cada una con sus propias características de sabor y apariencia. Algunas variedades populares incluyen la Golden Delicious, Red Delicious, Granny Smith, Fuji, Gala, y muchas otras.', ' Las manzanas se consumen frescas como fruta, pero también se utilizan para hacer jugos, salsas, compotas, pasteles, tartas, sidra y muchos otros productos. Son una fuente de nutrientes como la vitamina C y fibra dietética.', 'Los manzanos, árboles frutales pertenecientes al género Malus, requieren condiciones específicas para un cultivo exitoso. Para su plantación, es crucial seleccionar una zona con inviernos fríos y veranos moderados, ya que necesitan un período de frío para florecer adecuadamente. Los manzanos prefieren suelos bien drenados, profundos y con un pH ligeramente ácido a neutro, en el rango de 6.0 a 7.0. Antes de plantar, prepara el suelo mejorando su drenaje y ajustando el pH si es necesario. Durante el proceso de plantación, asegúrate de dejar suficiente espacio entre los árboles y considera la polinización cruzada plantando variedades compatibles. El cuidado continuo, la poda anual y el control de plagas son esenciales para el desarrollo saludable de los manzanos, aunque puede llevar tiempo antes de que comiencen a producir frutas de manera significativa.', 'La cosecha de manzanas es una etapa crítica en la producción de estos árboles frutales. Se realiza generalmente en otoño, cuando las manzanas están maduras. Para determinar si una manzana está lista para la cosecha, se considera su color, firmeza y sabor. La mayoría de las manzanas se cosechan cuando su color es brillante y uniforme, y cuando se separan fácilmente del árbol con un ligero giro. Es importante manejar las manzanas con cuidado para evitar daños y magulladuras. Se pueden cosechar a mano o mediante el uso de herramientas como escaleras y recolectores de frutas. Una vez cosechadas, las manzanas se almacenan en condiciones adecuadas, como bajas temperaturas y alta humedad, para prolongar su vida útil y mantener su calidad. La cosecha de manzanas es un proceso esencial en la producción de frutas frescas y productos derivados, como jugos, compotas y pasteles.'),
+(3, 'Mango', 'Anacardiacea', 'amarillo', 'mango.jpg', 'El mango es un árbol frutal que puede crecer hasta alturas de 10 a 40 metros, dependiendo de la variedad. Sus hojas son de color verde oscuro y brillante, y las flores son pequeñas y fragantes. El mango es una fruta de forma ovalada, con una piel exterior que puede variar en color desde verde a amarillo, naranja, rojo o incluso morado, según la variedad y su estado de madurez. La pulpa es jugosa, de color amarillo o naranja y tiene un sabor dulce y tropical.', 'Los mangos se consumen frescos como fruta, pero también se utilizan en una variedad de platos y bebidas, como ensaladas de frutas, batidos, salsas agridulces, chutneys y postres. También se pueden secar para hacer mango deshidratado.', 'La siembra del árbol de mango implica seleccionar un sitio con suelo bien drenado y exposición solar adecuada. Se recomienda plantar un árbol joven en un hoyo de al menos 1 metro de profundidad y ancho, incorporando materia orgánica al suelo. Asegurar un riego constante durante los primeros años y realizar podas de formación para fortalecer la estructura. El árbol de mango es sensible a las heladas y necesita protección en climas fríos. Además, es importante tener en cuenta las variedades de mango más adecuadas para la región y considerar la distancia de plantación adecuada para un crecimiento saludable. El mango puede empezar a dar frutos entre 2 y 4 años después de la siembra y requiere cuidados regulares, como fertilización y control de plagas, para un óptimo rendimiento.', 'La cosecha del árbol de mango se realiza cuando los frutos alcanzan la madurez adecuada, lo que generalmente se reconoce por su cambio de color y aroma fragante. Para cosecharlos, se utiliza una escalera y una vara de cosecha o simplemente se recogen a mano si están al alcance. Es importante tener cuidado al manejar los mangos para evitar dañarlos. Después de la cosecha, se deben almacenar en un lugar fresco y seco para prolongar su vida útil. Los mangos son frutas climatéricas, lo que significa que pueden seguir madurando después de la cosecha, por lo que es esencial controlar su estado de madurez para evitar la sobre maduración. La temporada de cosecha varía según la región, pero suele ser en los meses de primavera y verano.');
 
 -- --------------------------------------------------------
 
@@ -216,20 +218,21 @@ INSERT INTO `preguntas` (`id`, `tema`, `pregunta`, `opcion_a`, `opcion_b`, `opci
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `region`
+-- Estructura de tabla para la tabla `provincia`
 --
 
-CREATE TABLE `region` (
-  `reg_id` int(11) NOT NULL,
-  `reg_nombre` varchar(20) NOT NULL
+CREATE TABLE `provincia` (
+  `prov_id` int(11) NOT NULL,
+  `prov_nombre` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `region`
+-- Volcado de datos para la tabla `provincia`
 --
 
-INSERT INTO `region` (`reg_id`, `reg_nombre`) VALUES
-(1, 'Cundinamarca');
+INSERT INTO `provincia` (`prov_id`, `prov_nombre`) VALUES
+(1, 'Gualiva'),
+(2, 'Sabana Occidental');
 
 -- --------------------------------------------------------
 
@@ -257,7 +260,9 @@ INSERT INTO `registrouser` (`id`, `name`, `userName`, `password`, `email`) VALUE
 (6, 'edward', 'thiago12', '12345', 'santiagomendez@gmail.com'),
 (7, 'edward', 'thiago12', '12345', 'santiagomendez@gmail.com'),
 (8, 'jennyfer sanchez', 'jenny1234', '12345', 'note@gmail.com'),
-(9, 'ElHugoMaria', 'Huginho', '1234', 'hugomariasenior@gamil.com');
+(9, 'ElHugoMaria', 'Huginho', '1234', 'hugomariasenior@gamil.com'),
+(10, 'Pepe Pérez', 'Ppz1', '1234', 'pepep@gmail.com'),
+(11, 'santiago', 'Sa1', '123456', 'IVANPUTO@INTERNATIONALWELCOMS.');
 
 -- --------------------------------------------------------
 
@@ -303,7 +308,7 @@ ALTER TABLE `estadisticas`
 --
 ALTER TABLE `municipio`
   ADD PRIMARY KEY (`mun_id`),
-  ADD KEY `reg_id` (`reg_id`);
+  ADD KEY `prov_id` (`prov_id`);
 
 --
 -- Indices de la tabla `municipio-planta`
@@ -325,10 +330,10 @@ ALTER TABLE `preguntas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `region`
+-- Indices de la tabla `provincia`
 --
-ALTER TABLE `region`
-  ADD PRIMARY KEY (`reg_id`);
+ALTER TABLE `provincia`
+  ADD PRIMARY KEY (`prov_id`);
 
 --
 -- Indices de la tabla `registrouser`
@@ -377,16 +382,16 @@ ALTER TABLE `preguntas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
--- AUTO_INCREMENT de la tabla `region`
+-- AUTO_INCREMENT de la tabla `provincia`
 --
-ALTER TABLE `region`
-  MODIFY `reg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `provincia`
+  MODIFY `prov_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `registrouser`
 --
 ALTER TABLE `registrouser`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
@@ -396,7 +401,7 @@ ALTER TABLE `registrouser`
 -- Filtros para la tabla `municipio`
 --
 ALTER TABLE `municipio`
-  ADD CONSTRAINT `municipio_ibfk_1` FOREIGN KEY (`reg_id`) REFERENCES `region` (`reg_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `municipio_ibfk_1` FOREIGN KEY (`prov_id`) REFERENCES `provincia` (`prov_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `municipio-planta`

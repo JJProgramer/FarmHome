@@ -466,7 +466,6 @@ header .intro-text .intro-lead-in {
     text-transform: uppercase;
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
-    font-weight: 700;
     line-height: 50px;
 }
 
@@ -639,8 +638,8 @@ header .intro-text .intro-heading {
     transform: scale(1.2);
 }
 
-/**/
-Hojas .hojas {
+/*Hojas*/
+ .hojas {
     margin: 0;
     padding: 0;
 }

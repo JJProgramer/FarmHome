@@ -20,8 +20,6 @@ if (isset($_SESSION['userName'])) {
         <!--
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     </head>
 
     <body>
@@ -122,15 +120,6 @@ if (isset($_SESSION['userName'])) {
                         <label>Planta a buscar: </label>
                         <input onkeyup="buscar_ahora($('#buscar_1').val());" type="text" id="buscar_1" name="buscar_1" placeholder="Escribe aquí">
                     </div>
-
-                    <label>Provincia:</label>
-                    <select id="lista1" name="lista1">
-                        <option value="0">Selecciona...</option>
-                        <option value="1">Gualiva</option>
-                        <option value="2">Sabana Occidental</option>
-                    </select>
-                    <div id="select2lista"></div>
-                    <br>
                     <div class="card">
                         <div class="card-body">
                             <div id="datos_buscador"></div>
@@ -140,28 +129,6 @@ if (isset($_SESSION['userName'])) {
             </section>
 
     </body>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#lista1').val(1);
-            recargarLista();
-
-            $('#lista1').change(function() {
-                recargarLista();
-            });
-        })
-    </script>
-    <script type="text/javascript">
-        function recargarLista() {
-            $.ajax({
-                type: "POST",
-                url: "filtro.php",
-                data: "provincia=" + $('#lista1').val(),
-                success: function(r) {
-                    $('#select2lista').html(r);
-                }
-            });
-        }
-    </script>
     <script type="text/javascript">
         function buscar_ahora(buscar) {
             var parametros = {

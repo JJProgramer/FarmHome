@@ -11,11 +11,11 @@ try {
 } catch (Exception $e) {
 	echo "Hay algún problema con la conexión: " . $e->getMessage();
 }
+
 ?>
 
 
 <!-- 
-
 $contrasena = "";
 $usuario    = "root";
 $nombre_bd  = "farmhomedb";

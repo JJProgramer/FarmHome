@@ -107,7 +107,7 @@ if (isset($_SESSION['userName'])) {
         </div>
         <!-- Menu *************-->
         <main>
-            <!-- -->
+            <!-- 
         <section id="hojas">
             <div class="leaves">
                 <div class="set">
@@ -128,7 +128,7 @@ if (isset($_SESSION['userName'])) {
                     <div><img src="../img/leaves/imagen3.png"></div>
                     <div><img src="../img/leaves/imagen3.png"></div>
                 </div>
-        </section>
+        </section>-->
             <header>
                 <div class="container">
                     <div class="intro-text">

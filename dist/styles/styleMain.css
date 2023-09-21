@@ -440,6 +440,7 @@ main {
     padding: 0px;
     transition: margin-left 0.5s ease;
     height: 100%;
+    width: 100%;
 }
 
 main.min-main {
@@ -450,15 +451,10 @@ main.min-main {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
     background-image: url(../img/img5.jpg);
-    backdrop-filter: blur(40px);
     background-position: center center;
     background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
 
 }
 
@@ -515,23 +511,33 @@ header .palabra {
 /*Acerca de*/
 
 #about {
-    margin-top: 100px;
+    margin: 5rem;
+    margin-top: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
+    height: 50vh;
 }
 
 h1, h3, img {
-    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
 }
 
 .color {
     color: #79f775;
 }
-
+@media(min-width:200px) {
+    #about {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
 
 
 /*HOJASSSS*/
