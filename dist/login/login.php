@@ -69,11 +69,9 @@
                     $password = $_POST['password'];
                     $email = $_POST['email'];
 
-
                     if ($name == "" || $userName == "" || $password == "" || $email == "") {
                         echo "Los campos son obligatorios";
                     } else {
-
                         mysqli_query($conn, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
                         values ('$name','$userName','$password','$email')");
                     }

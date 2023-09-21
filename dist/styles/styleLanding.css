@@ -439,6 +439,7 @@ main {
     padding: 0px;
     transition: margin-left 0.5s ease;
     height: 100%;
+    width: 100%;
 }
 
 main.min-main {
@@ -449,16 +450,10 @@ main.min-main {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
     background-image: url(../img/img1.jpg);
-    backdrop-filter: blur(40px);
     background-position: center center;
     background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
-
 }
 
 header .intro-text {
@@ -512,6 +507,7 @@ header .intro-text .intro-heading {
 
 #about {
     margin: 5rem;
+    margin-top: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -527,10 +523,7 @@ header .intro-text .intro-heading {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 100%;
-    /* Establece un ancho máximo */
     margin: 0 auto;
-    /* Centra horizontalmente dentro de #about */
 }
 
 .custom-row h1 {
@@ -573,6 +566,7 @@ header .intro-text .intro-heading {
     }
 }
 
+
 /*Modales*/
 
 
@@ -603,11 +597,13 @@ header .intro-text .intro-heading {
     border-radius: 25px;
 }
 
+
 /*CARRUSEL IMGS*/
 #carrusel {
     /*    background: -webkit-linear-gradient(rgba(1, 70, 38, 0.89), rgba(0, 160, 72, 0.849), 
     rgb(51, 255, 0),rgba(0, 160, 72, 0.849),rgba(1, 70, 38, 0.89)); */
-    margin: 5rem;
+    margin: 2rem;
+    margin-top: 20rem;
     background-position: center center;
     background-repeat: none;
 }
@@ -643,15 +639,16 @@ header .intro-text .intro-heading {
     transform: scale(1.2);
 }
 
-/**/Hojas
-.hojas{
-    margin:0;
-    padding:0;
+/**/
+Hojas .hojas {
+    margin: 0;
+    padding: 0;
 }
+
 .leaves {
     position: absolute;
     width: 80%;
-    height: 253%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;

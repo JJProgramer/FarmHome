@@ -542,7 +542,7 @@ h1, h3, img {
 .leaves {
     position: absolute;
     width: 80%;
-    height: 190%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;

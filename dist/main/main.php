@@ -145,7 +145,7 @@ if (isset($_SESSION['userName'])) {
             <!-- Acerca de -->
             <section id="about">
                 <h1>¿Cuáles son las partes principales de las plantas?</h1>
-                <h3>Cóloca el cursor sobre las partes de la planta que quieres descubrir</h3>
+                <h3>Cóloca el cursor sobre las partes de la planta que quieres descubrir.</h3>
                 <br>
                 <img class="planta" src="../img/areaMapeo/plantaMap.png" alt="" usemap="#mapa">
                 <map name="mapa">
@@ -217,7 +217,7 @@ if (isset($_SESSION['userName'])) {
                 start();
             </script>
             <?php
-            include('../template/footer.php')
+            include('../template/footerm.php')
                 ?>
     </body>
 

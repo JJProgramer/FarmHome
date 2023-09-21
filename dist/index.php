@@ -45,19 +45,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="calculadora/calculadora.php">
+                        <a class="page-scroll" href="./calculadora/calculadora.php">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <span>Herramientas</span>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="biblioteca/library.php">
+                        <a class="page-scroll" href="./biblioteca/library.php">
                             <ion-icon name="document-text-outline"></ion-icon>
                             <span>Biblioteca</span>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="game/quiz/index.php">
+                        <a class="page-scroll" href="./game/quiz/index.php">
                             <ion-icon name="bookmark-outline"></ion-icon>
                             <span>Aprende</span>
                         </a>
@@ -100,6 +100,7 @@
     </div>
 
     <main>
+        <!--
         <section id="hojas">
             <div class="leaves">
                 <div class="set">
@@ -121,6 +122,7 @@
                     <div><img src="img/leaves/imagen3.png"></div>
                 </div>
         </section>
+        -->
         <header>
             <div class="container">
                 <div class="intro-text">
