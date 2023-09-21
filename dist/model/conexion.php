@@ -1,4 +1,4 @@
-<!-- 
+<?php
 $server ="localhost";
 $contrasena = "Juanes2004";
 $usuario    = "u985211323_admin";
@@ -11,10 +11,10 @@ try {
 } catch (Exception $e) {
 	echo "Hay algún problema con la conexión: " . $e->getMessage();
 }
--->
+?>
 
-<?php
 
+<!-- 
 
 $contrasena = "";
 $usuario    = "root";
@@ -25,4 +25,5 @@ try {
 	$conn = mysqli_connect('localhost','root','','farmhomedb');} catch (Exception $e) {
 	echo "Hay algún problema con la conexión: ".$e->getMessage();
 }
-?>
+
+-->
