@@ -30,6 +30,7 @@ if (isset($_SESSION['userName'])) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link href="https://icons8.com/icons/set/home">
         <link rel="stylesheet" href="./estilo.css">
+        <link rel="icon" href="../../img/icon.ico" type="image/x-icon">
         <title>FarmHome</title>
     </head>
 

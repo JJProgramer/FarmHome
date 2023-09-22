@@ -15,6 +15,7 @@ if (isset($_SESSION['userName'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FarmHome</title>
+        <link rel="icon" href="../img/icon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../styles/stylelibrary.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
         <!--
