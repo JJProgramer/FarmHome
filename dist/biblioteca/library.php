@@ -198,7 +198,7 @@ if (isset($_SESSION['userName'])) {
 <?php
 } else {
 
-    header('Location: /FarmHome/dist/login/login.php');
+    header('Location: ../login/login.php');
 }
 
 ?>
