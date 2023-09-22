@@ -88,7 +88,7 @@
                     <img src="img/user1.png" alt="">
                     <div class="info-usuario">
                         <div class="nombre-email">
-                            <span class="nombre">No has<br> iniciado Sesion</span>
+                            <span class="nombre">No has<br> iniciado Sesion </span>
 
                         </div>
                         <ion-icon name="ellipsis-vertical-outline"></ion-icon>

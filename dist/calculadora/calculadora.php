@@ -28,7 +28,7 @@ if (isset($_SESSION['userName'])) {
                 <div>
                     <div class="nombre-pagina">
                         <ion-icon id="cloud" name="leaf"></ion-icon>
-                        <span href="../maim/main.php">FarmHome</span>
+                        <a href="../main/main.php"><span>FarmHome</span></a>
                     </div>
                 </div>
 

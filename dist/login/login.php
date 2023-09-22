@@ -49,7 +49,7 @@
                 </form>
 
                 <!--Register-->
-                <form action="login.php" method="post" class="formulario__register">
+                <form method="post" class="formulario__register">
                     <h2>Regístrarse</h2>
                     <input type="text" name="name" placeholder="Nombre completo">
                     <input type="text" name="email" placeholder="Correo Electronico">
@@ -57,29 +57,7 @@
                     <input type="password" name="password" placeholder="Contraseña">
                     <input type="submit" id="enviar" class="btn_enviar" value="Registar" name="btn_registrar">
                 </form>
-                <?php
-                include("../model/conexion.php");
-
-                $name = "";
-                $userName = "";
-                $password = "";
-                $email = "";
-
-                if (isset($_POST['btn_registrar'])) {
-                    $name = $_POST['name'];
-                    $userName = $_POST['userName'];
-                    $password = $_POST['password'];
-                    $email = $_POST['email'];
-
-                    if ($name == "" || $userName == "" || $password == "" || $email == "") {
-                        echo "Los campos son obligatorios";
-                    } else {
-                        mysqli_query($conn, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
-                        values ('$name','$userName','$password','$email')");
-                    }
-                    echo "REGISTRO EXITOSO";
-                }
-                ?>
+                
             </div>
         </div>
 
@@ -92,6 +70,7 @@
 <?php
 
     include ('../login/validacion.php');
+    include ('../login/registro.php');
 ?>
 
 </html>
