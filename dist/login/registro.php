@@ -20,13 +20,13 @@ if (isset($_POST['btn_registrar'])) {
     <?php
 
     } else {
-        mysqli_query($conn, "INSERT INTO $tabla_db1 ( name, userName, password, email) 
+        mysqli_query($conn, "INSERT INTO registrouser ( name, userName, password, email) 
                         values ('$name','$userName','$password','$email')");
     ?>
         <script>
             alert("¡Te has registrado satisfactoriamente!");
         </script>
-<?php
+    <?php
     }
 }
 ?>
