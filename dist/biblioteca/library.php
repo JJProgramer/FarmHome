@@ -117,66 +117,86 @@ if (isset($_SESSION['userName'])) {
                     </div>
                 </div>
             </header>
-            <section id="buscar">
-                <div class="col-12">
-                    <div class="custom-row">
-                        <label>Planta a buscar: </label>
-                        <input onkeyup="buscar_ahora($('#buscar_1').val());" type="text" id="buscar_1" name="buscar_1" placeholder="Escribe aquí">
-                    </div>
 
-                    <label>Provincia:</label>
-                    <select id="lista1" name="lista1">
-                        <option value="0">Selecciona...</option>
-                        <option value="1">Gualiva</option>
-                        <option value="2">Sabana Occidental</option>
+            <section>
+
+                <form method="post" action="filtro.php">
+                    <label for="provincia">Provincia:</label>
+                    <select name="provincia" id="provincia">
+                        <option value="">Seleccione una provincia</option>
+                        <?php
+                        include('../model/conexion.php');
+
+                        $sql = "SELECT prov_id, prov_nombre FROM provincia";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<option value='" . $row['prov_id'] . "'>" . $row['prov_nombre'] . "</option>";
+                            }
+                        }
+                        ?>
                     </select>
-                    <div id="select2lista"></div>
-                    <br>
-                    <div class="card">
-                        <div class="card-body">
-                            <div id="datos_buscador"></div>
-                        </div>
-                    </div>
+
+                    <label for="municipio">Municipio:</label>
+                    <select name="municipio" id="municipio" disabled>
+                        <option value="">Seleccione una provincia primero</option>
+                    </select>
+
+                    <input type="submit" value="Buscar Plantas">
+                </form>
+
+                <div id="resultados">
+                    <!-- Aquí se mostrarán las plantas -->
                 </div>
+
+
             </section>
 
     </body>
-    <script type="text/javascript">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
         $(document).ready(function() {
-            $('#lista1').val(1);
-            recargarLista();
+            $("#provincia").change(function() {
+                var prov_id = $(this).val();
+                if (prov_id !== "") {
+                    $.ajax({
+                        type: "POST",
+                        url: "cargar_municipio.php",
+                        data: {
+                            prov_id: prov_id
+                        },
+                        success: function(data) {
+                            $("#municipio").html(data);
+                            $("#municipio").prop('disabled', false);
+                        }
+                    });
+                } else {
+                    $("#municipio").html('<option value="">Seleccione una provincia primero</option>');
+                    $("#municipio").prop('disabled', true);
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("form").submit(function(e) {
+                e.preventDefault(); 
 
-            $('#lista1').change(function() {
-                recargarLista();
+                var provincia_id = $("#provincia").val();
+                var municipio_id = $("#municipio").val();
+
+                $.ajax({// Evita el envío tradicional del formulario
+                    type: "POST",
+                    url: "filtro.php", // URL del archivo PHP para procesar la búsqueda
+                    data: {
+                        provincia: provincia_id,
+                        municipio: municipio_id
+                    },
+                    success: function(data) {
+                        $("#resultados").html(data); // Mostrar los resultados en el div "resultados"
+                    }
+                });
             });
-        })
-    </script>
-    <script type="text/javascript">
-        function recargarLista() {
-            $.ajax({
-                type: "POST",
-                url: "filtro.php",
-                data: "provincia=" + $('#lista1').val(),
-                success: function(r) {
-                    $('#select2lista').html(r);
-                }
-            });
-        }
-    </script>
-    <script type="text/javascript">
-        function buscar_ahora(buscar) {
-            var parametros = {
-                "buscar": buscar
-            };
-            $.ajax({
-                data: parametros,
-                type: 'POST',
-                url: 'buscador.php',
-                success: function(data) {
-                    document.getElementById("datos_buscador").innerHTML = data;
-                }
-            });
-        }
+        });
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -1,17 +1,29 @@
 <?php
 include('../model/conexion.php');
 
-    $provincia = $_POST['provincia'];
-    $filtro = "SELECT mun_id, mun_nombre, prov_id FROM municipio WHERE prov_id = '$provincia'";
-    $resultado = mysqli_query($conn, $filtro);
+if (isset($_POST['provincia']) && isset($_POST['municipio'])) {
+    $provincia_id = $_POST['provincia'];
+    $municipio_id = $_POST['municipio'];
 
-        $cadena = "<label>Municipio</label> 
-                    <select id='lista2' name='lista2'>";
-        
-        while ($ver = mysqli_fetch_row($resultado)) {
-            $cadena = $cadena . '<option value=' . $ver[0] . '>' . utf8_encode($ver[1]) . '</option>';
+    $sql = "SELECT DISTINCT pla_id, pla_nombre, pla_img
+            FROM planta
+            INNER JOIN municipio_planta mp ON pla_id = planta_pla_id
+            WHERE municipio_mun_id = $municipio_id";
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $output = "";
+        while ($row = $result->fetch_assoc()) {
+            $output .= "<div class=' card' style='display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: flex-start; max-width: 400px;'>";
+            $output .= "<a href='ver_planta.php?id=" . $row['pla_id'] . "'>";
+            $output .= "<h2 style='text-align: center';>" . $row['pla_nombre'] . "</h2>";
+            $output .= "<img src='./imagenes/" . $row['pla_img'] . "' alt='' style='width: 300px; height: 350px;'></a>";
+            $output .= "</div>";
         }
-
-        echo  $cadena . "</select>";
-
+        echo $output;
+    } else {
+        echo "No se encontraron plantas en este municipio.";
+    }
+}
 ?>

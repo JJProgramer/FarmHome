@@ -1,11 +1,8 @@
 <?php include('../model/conexion.php');
 
-$buscador = mysqli_query($conn, "SELECT * FROM planta WHERE pla_nombre LIKE LOWER('%" . $_POST["buscar"] . "%') ");
-$numero = mysqli_num_rows($buscador); 
+
 ?>
-<h3 class="text-muted">Resultados encontrados (
-    <?php echo $numero; ?>) :
-</h3>
+
 
 <div class="tarjeta">
     <?php while ($resultado = mysqli_fetch_assoc($buscador)) { ?>
