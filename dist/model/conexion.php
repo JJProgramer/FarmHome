@@ -1,6 +1,6 @@
 <?php
 $server ="localhost";
-$contrasena = "Juanes2004";
+$contrasena = "JJProgramer2023";
 $usuario    = "u985211323_admin";
 $nombre_bd  = "u985211323_farmhomedb";
 
