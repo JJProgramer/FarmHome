@@ -14,7 +14,7 @@ if (isset($_SESSION['userName'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FarmHome</title>
         <link rel="icon" href="../img/icon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="../styles/styleMain.css">
+        <link rel="stylesheet" href="../styles/styleMain1.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     </head>
 
@@ -133,7 +133,8 @@ if (isset($_SESSION['userName'])) {
             <header>
                 <div class="container">
                     <div class="intro-text">
-                        <div class="intro-lead-in">Bienvenido
+                        <div class="intro-lead-in">
+                            BIENVENIDO
                             <?php echo "$userName" ?>
                         </div>
                         <div class="intro-heading">
