@@ -55,7 +55,7 @@ if (isset($_SESSION['userName'])) {
                                 </a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="#">
+                                <a class="page-scroll" href="https://simulador.jjss.tech/" target="_blank">
                                     <ion-icon name="game-controller"></ion-icon>
                                     <span>Simulador<br>de siembra</span>
                                 </a>
